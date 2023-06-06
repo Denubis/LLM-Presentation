@@ -229,10 +229,24 @@ From me, prompt, prior slide ``Why should they use the app *during* my presentat
 
 \begin{frame}{This presentation is open source}
 
-You can get the code to the most recent version of this presentation at: 
-    
+You can get the code to the most recent version of this presentation at: https://doi.org/10.17605/OSF.IO/RD24Y\\[1em]
+The presentation is licensed CC-BY-SA, and will be iterated upon in the future.
+
+\qrcode{https://doi.org/10.17605/OSF.IO/RD24Y}
+
 \end{frame}
 
+
+\begin{frame}{Plan for the workshop}
+\begin{itemize}
+    \item What are these Generative AI/LLM things and how should we think about them? (Activity I: Think, Pair, Share)
+    \item How can we \textit{currently} use these tools in useful ways? (Activity II: Asking a question of a PDF)
+    \item How do I currently use these tools? (Activity III: Demonstration of github copilot)
+    \item Dangers and confabulations (Activity IV: Replicating a confabulation)
+    \item Prepared questions from the invitation, discussion, further demonstrations.
+\end{itemize}
+    
+\end{frame}
 % \slidetemplate
 % {Figures/test_normal_image.jpg} % Image
 % {1} % Mask
@@ -354,9 +368,6 @@ You can get the code to the most recent version of this presentation at:
 }
 {\purplerect{Who invented the "Generative Pre-trained Transformer" and what is it? How did that turn into ChatGPT? What's a Large Language Model and how does it relate to a General Purpose Transformer? Please cite your sources and search the web.}
 \whiterect{ ... Generative Pre-trained Transformer is a type of large language model that uses the Transformer architecture, which enables it to learn patterns in language and generate text that is coherent and human-like. ...}
-\purplerect{Ok. Here's what I've got on my slide. ...}
-\whiterect{That’s a good summary of the main points. You might want to add some details or examples to make it more clear and engaging for your audience. ...
-}
 }
 {https://sharegpt.com/c/uUtSc2Z}
 
@@ -365,7 +376,7 @@ You can get the code to the most recent version of this presentation at:
 
 \begin{frame}{A representative error}
 
-Last slide, I asked the LLM: "Who invented the "General Purpose Transformer" and what is it?" and it responded "A General Purpose Transformer is a type of large language model that uses the Transformer architecture..."\\[1em]
+Last slide, I initially asked the LLM: "Who invented the "General Purpose Transformer" and what is it?" and it responded "A General Purpose Transformer is a type of large language model that uses the Transformer architecture..."\\[1em]
 
 Unfortunately, I got the acronym wrong. It's a Generative Pre-Trained Transformer, not General Purpose. The Large Language Model was \textit{entirely happy to continue on, without correcting me.}\\[1em]
 
@@ -648,24 +659,6 @@ My own experiments
    
 \end{frame}
 
-\begin{frame}{Activity IV: Discussing the fake cases and replicating the worst ChatGPT bug}
-
-Let's replicate this bug.
-
-\begin{quote}    
-\textbf{The worst ChatGPT bug}
-
-``I apologize for the confusion earlier. Upon double-checking, I found that the case Varghese v. China Southern Airlines Co. Ltd., 925 F.3d 1339 (11th Cir. 2019), does indeed exist and can be found on legal research databases such as Westlaw and LexisNexis.'' ... 
-
-They can't do that. They are best thought of as role-playing conversation simulators—playing out the most statistically likely continuation of any sequence of text. ...
-
-What’s a common response to the question ``are you sure you are right?''—it's ``yes, I double-checked''. 
-
-\end{quote}    
-    
-\href{https://simonwillison.net/2023/May/27/lawyer-chatgpt/}{https://simonwillison.net/2023/May/27/lawyer-chatgpt/}              
-
-\end{frame}
 
 
 \begin{frame}{You own the consequences.}
@@ -683,6 +676,25 @@ What’s a common response to the question ``are you sure you are right?''—it'
         \caption{Section 7, openAI TOS 14 March 2023, https://openai.com/policies/terms-of-use}
     \end{figure}
     
+\end{frame}
+
+\begin{frame}{Activity IV: Discussing the fake cases and replicating the worst ChatGPT bug}
+
+Let's replicate this bug.
+
+\begin{quote}    
+\textbf{The worst ChatGPT bug}
+
+``I apologize for the confusion earlier. Upon double-checking, I found that the case Varghese v. China Southern Airlines Co. Ltd., 925 F.3d 1339 (11th Cir. 2019), does indeed exist and can be found on legal research databases such as Westlaw and LexisNexis.'' ... 
+
+They can't do that. They are best thought of as role-playing conversation simulators—playing out the most statistically likely continuation of any sequence of text. ...
+
+What’s a common response to the question ``are you sure you are right?''—it's ``yes, I double-checked''. 
+
+\end{quote}    
+    
+\href{https://simonwillison.net/2023/May/27/lawyer-chatgpt/}{https://simonwillison.net/2023/May/27/lawyer-chatgpt/}              
+
 \end{frame}
 \section{Questions from the Audience}
 \begin{frame}{``How will they change my life?'' --C.B.}
