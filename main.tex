@@ -156,26 +156,21 @@ style=authoryear,
 {0} % Mask
 {A hands on introduction to Large Language Models like Bing Chat and ChatGPT}%Title
 {Brian Ballsun-Stanton }%Author
-{% Prompt
-\purplerect{Hi Bing. Today please act as my technical assistant. We are going to be generating \LaTeX{}, images, and text for slides for a presentation about Large Language Models. Please keep your responses short because I will be integrating this text into the slides. Do you understand these instructions?}
-\whiterect{Yes, I understand. I will try to help you as best as I can. \emoji{smiling-face-with-smiling-eyes}}
-
-\purplerect{Great. To start with, please generate some Beamer boilerplate and macros. The presentation will utilise your generated images in the background (so make sure that that each slide can have a custom image as its background, with an adjustable mask over the image...}
+{\includegraphics[height=2em]{ccby.png}}
+{https://doi.org/10.17605/OSF.IO/RD24Y
+% https://sharegpt.com/c/qMMp0v1
 }
-{https://sharegpt.com/c/qMMp0v1}
-{June 7, 2023 --- Macquarie University Incubator --- Presentation licensed CC-BY-SA \includegraphics[height=1em]{ccby.png} }
+{June 7, 2023 --- Macquarie University Incubator --- Presentation licensed CC-BY-SA 
+}
 % \sectiontemplate
 % {} % Image
 % {} % Mask
 % {} % Title
 % {} % Prompt
 % {} % URL
-
-\slidetemplate
-{Figures/test_normal_image.jpg} % Image
-{1} % Mask
-{Before we begin: Get Bing Copilot/Chat onto your devices!} % Title
-{%
+\section{Before}
+\clearbackground{}
+\begin{frame}{Before we begin: Get Bing Copilot/Chat onto your devices!}
 \vfill
 \begin{columns}[t]
 \begin{column}{.4\textwidth}
@@ -195,26 +190,58 @@ Normal computers. Install Microsoft Edge and visit\\
 \url{https://bing.com/new}
 \vfill 
 
-Why am I telling you now?
-\vfill
-~
-} % Content
-{\purplerect{I'm making slides for a long workshop. At the start of the workshop, I'd like to encourage my users to download Bing Chat and play with it during the workshop. First, what's a good way to encourage them to install the app? Second, why should they bother to play with Bing Chat during my presentation ...}
-\whiterect{Here are some possible sentences you can use to encourage your users to install Bing Chat and play with it during your workshop: ... }
-\purplerect{No, those are all too generic and too marketing-speak. This is for an academic audience. Why should they use the app *during* my presentation? ...
-}
-} % Prompt
-{https://sharegpt.com/c/sRA2521} % URL
+Use these tools during the workshop to find additional explanations and examples. If you find something good, something wrong, or need a sanity check -- interrupt me!
+
+\end{frame}
+
+% \slidetemplate
+% {Figures/test_normal_image.jpg} % Image
+% {1} % Mask
+% {Before we begin: Get Bing Copilot/Chat onto your devices!} % Title
+% {%
+% \vfill
+% \begin{columns}[t]
+% \begin{column}{.4\textwidth}
+% \centering
+% AppStore: ``Bing: Chat with AI \& GPT-4"\\[2mm]
+% \qrcode{https://apps.apple.com/gb/app/bing-your-ai-copilot/id345323231}
+% \end{column}
+% \begin{column}{.4\textwidth}
+% \centering
+% Google Play: ``Bing: Chat with AI \& GPT-4"\\[2mm]
+% \qrcode{https://play.google.com/store/apps/details?id=com.microsoft.bing&start=20}
+% \end{column}
+% \end{columns}
+
+% \vfill
+% Normal computers. Install Microsoft Edge and visit\\
+% \url{https://bing.com/new}
+% \vfill 
+
+% Why am I telling you now?
+% \vfill
+% ~
+% } % Content
+% {
+% } % Prompt
+% {https://sharegpt.com/c/sRA2521} % URL
 
 \clearbackground{}
 
-\begin{frame}{A response from Bing}
-From me, prompt, prior slide ``Why should they use the app *during* my presentation?''
+% \begin{frame}{A response from Bing}
 
-\begin{quote}
-“Large Language Models are changing the way we communicate, learn, and create. Bing Chat lets you interact with one of these models and see what it can do for you. You can use it to supplement the presentation with additional information, examples, and exercises. As Ethan Mollick said, 'We taught people how to do math in a world with calculators. Now the challenge is for educators to teach students how the world has changed again, and how they can adapt to that.' \parencite{Wood2023-zf}” -- Brian Ballsun-Stanton using Bing Chat
-\end{quote}    
-\end{frame}
+% \purplerect{...Why should they use the app *during* my presentation?}
+
+% \begin{quote}
+% “Large Language Models are changing the way we communicate, learn, and create. Bing Chat lets you interact with one of these models and see what it can do for you. You can use it to supplement the presentation with additional information, examples, and exercises. As Ethan Mollick said, 'We taught people how to do math in a world with calculators. Now the challenge is for educators to teach students how the world has changed again, and how they can adapt to that.' \parencite{Wood2023-zf}” -- Brian Ballsun-Stanton using Bing Chat
+% \end{quote}    
+
+% Full conversation: https://sharegpt.com/c/sRA2521
+
+% \qrcode{https://sharegpt.com/c/sRA2521}
+% \end{frame}
+
+\section{Introduction}
 
 \begin{frame}{Who am I?}
 
@@ -239,9 +266,9 @@ The presentation is licensed CC-BY-SA, and will be iterated upon in the future.
 
 \begin{frame}{Plan for the workshop}
 \begin{itemize}
-    \item What are these Generative AI/LLM things and how should we think about them? (Activity I: Think, Pair, Share)
-    \item How can we \textit{currently} use these tools in useful ways? (Activity II: Asking a question of a PDF)
-    \item How do I currently use these tools? (Activity III: Demonstration of github copilot)
+    \item What are these Generative AI/LLM things? (Activity I: Think, Pair, Share)
+    \item ... and how should we think about them? (Activity II: Asking a question of a PDF)
+    \item How can we \textit{currently} use these tools in useful ways? (Activity III: Demonstration of github copilot)
     \item Dangers and confabulations (Activity IV: Replicating a confabulation)
     \item Prepared questions from the invitation, discussion, further demonstrations.
 \end{itemize}
@@ -290,12 +317,13 @@ The presentation is licensed CC-BY-SA, and will be iterated upon in the future.
 }
 {https://sharegpt.com/c/9VQqKJt}
 
-\section{What is Generative AI}
+
+\section{What are these Generative AI/LLM things?}
 % Section slide
 \sectiontemplate
 {Figures/7b8b3c95-5691-45c7-8e4e-89fb2aa2aed4.jpeg}
 {0}
-{What is Generative AI/a Large Language Model?}
+{What are these Generative AI/LLM things and how should we think about them?}
 {\purplerect{Ok, please suggest a Dall-E prompt for a slide background. The slide is a section header, and the title is: "What is Generative AI/a Large Language Model?" We're going for vivid unsplash style backgrounds. This prompt will also be part of the slide. Please don't use "large language model" as part of the prompt, as Dall-E is not sure how to visualise it. Use an appropriate visual metaphor instead. ... 
 }
 \whiterect{Here are some possible Dall-E prompts for a slide background:
@@ -449,17 +477,11 @@ Buy me a beer, and we can talk about:
     
 \end{frame}
 
-\subsection{Activity: Think, Pair Share}
+
 % Conversational. What do they think these LLMs are? Are not?
-\section{How to think about Large Language Models}
+
 % Calculators for words
 
-\section{Blind Prompting and Prompt Engineering}
-\subsection{Activity: Asking a paper questions}
-\section{My current uses of blind prompting}
-\section{The importance of discernment/Planning your AI Intern}
-\section{A variety of tasks}
-\section{Activity I: Think pair share}
 
 \begin{frame}{Activity I: Think, Pair, Share}
 
@@ -474,7 +496,26 @@ Buy me a beer, and we can talk about:
 
 \end{frame}
 
-\section{How to think about these things}
+\section{ ... and how should we think about them?}
+\sectiontemplate{Figures/architecture-of-ideas.jpeg}
+{0}
+{ ... and how should we think about them?}
+{\purplerect{Ok, the next one is for a section which starts about talking about rules of thumb. Perhaps something like an architectural cross-section line drawing for a gothic church (with lines suggesting measurements) with something about the image suggesting an AI. Ideas?
+}
+\whiterect{I’ll try to create that.
+}
+\purplerect{No. The section is titled: "... and how should we think about them?" (regarding AIs) and it talks about rules of thumb, and prompt engineering. What about "an architecture of ideas?"
+}
+}{https://www.bing.com/images/create/an-architecture-of-ideas/647f265d0e7345ecb2fd57a822412e8d?id=6slYCGaX5fg7YtEw8U9cBg\%3d\%3d&view=detailv2&idpp=genimg&idpclose=1&FORM=SYDBIC}
+
+\clearbackground{}
+
+\begin{frame}{Setting the scene}
+    \begin{quote}
+        "So much for the big picture. Today, we're going to talk about [using Large Language Models] \textbf{As usual, we're looking to ask the right questions.} ... Ms. Chumlig said the secret of success was `to learn to ask the right questions'. But to do that she also said you had \textbf{`to know something about something'}. That wisdom and `everyone has some special talent' were the drumbeats of her classes. " \parencite{Vinge2007-qc}
+    \end{quote}
+\end{frame}
+
 \begin{frame}{A typology of LLMs}
 
 What's the difference between Bing Chat (20k ish tokens), GPT4 (8k or 32k window) and GPT 3.5 4k tokens, Claude+, Claude-100k?
@@ -544,27 +585,45 @@ A: tomorrow --\parencite{Hashimoto2023-qo}
 \end{itemize}
     
 \end{frame}
-\section{Activity II: Follow-along prompting}
-\begin{frame}{Activity II: Asking a question of a PDF}
-\begin{columns}[t]
-\begin{column}{.5\textwidth}
-    \begin{itemize}
+
+% \begin{frame}{Activity II: Asking a question of a PDF}
+\slidetemplate{Figures/tool-robot.jpeg}
+{1}
+{Activity II: Asking a question of a PDF}
+{
+\begin{itemize}
     \item In edge, make sure "page context" is on from the sidebar
-    \item Load ``Is Justified True Belief Knowledge?'' by Gettier (https://courses.physics.illinois.edu/phys419/sp2019/Gettier.pdf)
-    \item ``Hi Bing. Today you are going to be acting as my postgraduate research assistant. We will be exploring a philosophy text. Please load the page from the local context. Do not search the web.''
+    \item Load ``Is Justified True Belief Knowledge?'' by Gettier as a PDF in Edge
+    \item Prompt it. The essential part of the prompt is `Please load the page from the local context.'
+    \item Make sure its response includes details from the PDF. Sometimes it goes off track.
 \end{itemize}
-\end{column}
-\begin{column}{.5\textwidth}
-"Hello, this is Bing. I’m happy to help you with your research. I have loaded the page from the local context. It is a journal article titled “Is Justified True Belief Knowledge?” by Edmund L. Gettier, published in Analysis in 1963. The article challenges the traditional definition of knowledge as justified true belief and presents two counterexamples to show that it is not sufficient."
+
+Here are some example followups:
+
 \begin{itemize}
     \item From this paper, what are those two examples? Do not search the web.
     \item Could you explain Case I to me in more detail, please? What are some other examples?
 \end{itemize}
-\end{column}
-\end{columns}
+}
+{\purplerect{Hi Bing. Today you are going to be acting as my postgraduate research assistant. We will be exploring a philosophy text. Please load the page from the local context. Do not search the web.}
+\whiterect{
+Hello, this is Bing. I’m happy to help you with your research. I have loaded the page from the local context. It is a journal article titled “Is Justified True Belief Knowledge?” by Edmund L. Gettier, published in Analysis in 1963. The article challenges the traditional definition of knowledge as justified true belief and presents two counterexamples to show that it is not sufficient.
+}
+}{
+https://fitelson.org/proseminar/gettier.pdf
+}
+    
+
+
+
+
     %  (https://mitchellh.com/writing/prompt-engineering-vs-blind-prompting)
-\end{frame}
-\section{How to think about a LLM}
+% \end{frame}
+\section{How can we \textit{currently} use these tools in useful ways?}
+\sectiontemplate{Figures/tool-robot.jpeg}{0}{How can we \textit{currently} use these tools in useful ways?}{\purplerect{Ok, the next section which needs an illustration is "How can we \textit{currently} use these tools in useful ways?" -- perhaps some sort of self-illustrating tool manual?
+}}{https://www.bing.com/images/create/some-sort-of-self-illustrating-tool-manual/647f287fc8464a8fa55eae3812def610?id=J6i\%2bbJEd6bz8TqlFT9fGiQ\%3d\%3d&view=detailv2&idpp=genimg&idpclose=1&FORM=SYDBIC}
+
+\clearbackground{}
 \begin{frame}{These tools are mirrors which amplify}
 
 
@@ -578,7 +637,7 @@ A: tomorrow --\parencite{Hashimoto2023-qo}
      
       % I'm good at knowing what a good undergrad paper looks like, so I can use it to make "undetectable" (hah) undergrad outputs that get distinctions
 \end{frame}
-\begin{frame}{``What can't they do?'' --N.A.}
+\begin{frame}{Question: ``What can't they do?'' By: N.A.}
 My own experiments
   \begin{itemize}
       \item Deception (\textit{act} on a theory of mind)
@@ -618,7 +677,6 @@ My own experiments
 		
 \end{frame}
 
-\section{How do I use these tools?}
 
 \begin{frame}{What do I currently use them for?}
     \begin{itemize}
@@ -642,7 +700,10 @@ My own experiments
     
 \end{frame}
 
-\section{Dangers and how to do a Hostile Reading}
+\section{Dangers and confabulations}
+\sectiontemplate{Figures/stormy-ship.jpeg}{0}{Dangers and the need for a Hostile Reading}{\purplerect{Ok, the next section is on "Dangers and how to do a Hostile Reading" -- I talk about confabulation and owning the consequences. Perhaps an oil painting of a ship ruined on some rocks with a stormy red sky?
+}}{https://www.bing.com/images/create/an-oil-painting-of-a-ship-ruined-on-some-rocks-wit/647f29d6788a493ead248fd609d56c12?id=RyQFpoAHGNhoTu1w0hMsvw\%3d\%3d&view=detailv2&idpp=genimg&idpclose=1&FORM=SYDBIC}
+\clearbackground{}
 \begin{frame}{Hallucitations}
 \begin{columns}[t]
 \begin{column}{.6\textwidth}
@@ -697,7 +758,7 @@ What’s a common response to the question ``are you sure you are right?''—it'
 
 \end{frame}
 \section{Questions from the Audience}
-\begin{frame}{``How will they change my life?'' --C.B.}
+\begin{frame}{Question: ``How will they change my life?'' By: C.B.}
 \begin{itemize}
     \item A whole lot of scams (floor-wax and desert topping)
     \item A shift in power
@@ -710,7 +771,7 @@ What’s a common response to the question ``are you sure you are right?''—it'
     
 \end{frame}
 
-\begin{frame}{``Instead of taking a pre-packaged ChatGPT solution, how can one extend or limit the scope of the AI's source?'' --M.R.
+\begin{frame}{Question: ``Instead of taking a pre-packaged ChatGPT solution, how can one extend or limit the scope of the AI's source?'' By: M.R.
 }
 
 Consider: Background knowledge versus the context window        
@@ -729,7 +790,7 @@ And since you can run them on your own instances, they remove all possible conce
 \end{frame}
 
 
-\begin{frame}{``How to make assessments that show high AI'' --P.B.}
+\begin{frame}{Question: ``How to make assessments that show high AI'' By: P.B.}
 \begin{columns}[t]
 \begin{column}{.4\textwidth}
     \centering
