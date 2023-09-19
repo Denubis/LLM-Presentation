@@ -9,6 +9,7 @@
 \usepackage{microtype}
 \usepackage{emoji}
 \usepackage{etoolbox}
+\usepackage{multicol}
 \usetikzlibrary{shadows.blur}
 \usetikzlibrary{shapes.misc}
 \usepackage[
@@ -155,12 +156,12 @@ style=authoryear,
 \titletemplate{Figures/DALLE 2023-05-10 11.57.11-unsplash slide background-whirlpool.png}% Title image
 {0} % Mask
 {A hands on introduction to Large Language Models like Bing Chat and ChatGPT}%Title
-{Brian Ballsun-Stanton }%Author
+{Brian Ballsun-Stanton}%Author
 {\includegraphics[height=2em]{ccby.png}}
 {https://doi.org/10.17605/OSF.IO/RD24Y
 % https://sharegpt.com/c/qMMp0v1
 }
-{10 July 2023 --- University of Leipzig --- Presentation licensed CC-BY-SA 
+{20 September 2023 1pm--4pm --- Macquarie University
 }
 % \sectiontemplate
 % {} % Image
@@ -301,8 +302,8 @@ The presentation is licensed CC-BY-SA, and will be iterated upon in the future.
 \vfill
 \begin{snugshade}
     
-    \begin{quote}
-    Confabulation is a neuropsychiatric disorder wherein a patient generates a false memory without the intention of deceit.\cite{Wiggins2022-gn}
+      \begin{quote}
+    ... [T]he idea that patients sometimes make statements that are false or engage in behaviors that reflect false memories or beliefs, and that they do this with no deliberate intention to deceive. \parencite{Johnson2000-db}
     \end{quote}
 \end{snugshade}
 
@@ -344,7 +345,7 @@ The presentation is licensed CC-BY-SA, and will be iterated upon in the future.
 \begin{figure}
     \centering
     \includegraphics[width=.5\textwidth]{Figures/Gartner_Hype_Cycle.svg.png}
-    \caption{Gardner Hype Cycle, https://en.wikipedia.org/wiki/Gartner\_hype\_cycle}
+    \caption{Gartner Hype Cycle, https://en.wikipedia.org/wiki/Gartner\_hype\_cycle}
     
 \end{figure}
 
@@ -458,14 +459,18 @@ Dall-E "Bucket with Data Sloshing Over the Sides"
 }
 {https://shareg.pt/J5ZzOWZ}
 
-\begin{frame}{The machines we have now are not conscious}
+\begin{frame}{A poor choice of term}
 
-\begin{quote}
-    There was an exchange on Twitter a while back where someone said, ‘What is artificial intelligence?’ And someone else said, ‘A poor choice of words in 1954’. And, you know, they’re right. I think that if we had chosen a different phrase for it, back in the ’50s, we might have avoided a lot of the confusion that we’re having now.
+\begin{columns}
+\begin{column}{0.4\textwidth}
 
-— Ted Chiang via \cite{Murgia2023-ak} via (http://simonwillison.net/2023/Jun/4/ted-chiang)
-\end{quote}
-    
+``There was an exchange on Twitter a while back where someone said, ‘What is artificial intelligence?’ And someone else said, \textbf{‘A poor choice of words in 195[6]’}. And, you know, they’re right. I think that if we had chosen a different phrase for it, back in the ’50s, we might have avoided a lot of the confusion that we’re having now.'' — Ted Chiang via (\cite{Murgia2023-ak})
+
+\end{column}    
+\begin{column}{0.6\textwidth}
+``We propose that a 2-month, 10-man study of \textbf{artificial intelligence} be carried out during the summer of 1956 at Dartmouth College in Hanover, New Hampshire. The study is to proceed on the basis of the conjecture that every aspect of learning or any other feature of intelligence can in principle be so precisely described that a machine can be made to simulate it. An attempt will be made to find how to make machines use language, form abstractions and concepts, solve kinds of problems now reserved for humans, and improve themselves. \textbf{We think that a significant advance can be made in one or more of these problems if a carefully selected group of scientists work on it together for a summer.}'' (\cite{McCarthy1955-cf})
+\end{column}
+\end{columns}
 \end{frame}
 
 \begin{frame}{What aren't we talking about?}
@@ -497,7 +502,11 @@ Buy me a beer, and we can talk about:
 
 
 \begin{itemize}
-    \item 5 minutes: Think (with a copilot). On your phones/or computers start a conversation with Bing by asking something like: ``What is Bing Chat and how does a LLM work?" (You may also want to follow that up with ``Explain that to me as if I was a [philosophy, art history, business] professor.'')    
+    \item 5 minutes: Think (with a copilot).
+
+    Load up https://perplexity.vercel.app/ and 
+    
+    On your phones/or computers start a conversation with Bing by asking something like: ``What is Bing Chat and how does a LLM work?" (You may also want to follow that up with ``Explain that to me as if I was a [philosophy, art history, business] professor.'')    
     \item Have a bit of a chat with the large language model. Follow links.
     \item Find the errors!
     \item 5 minutes: Talk to your neighbour. Contrast your experiences/explanations/errors.
@@ -577,6 +586,7 @@ A: tomorrow --\parencite{Hashimoto2023-qo}
     \end{quote}
 
 \begin{itemize}
+    \item \href{https://chat.openai.com/share/1b055ec4-9ba3-49d0-ac4b-3710db02b8c1}{Edit a Journal Article}
     \item \href{https://chat.openai.com/share/7d52a80f-ae8b-4b02-9048-fd3a91416778}{Link: Clean data from a web table, GPT-4}
     \item \href{https://chat.openai.com/share/0bda34c2-a4eb-416c-a260-0fbfe340aba0}{Link: Abstract Generation}
     \item (marginal) Bing extracting spreadsheet values
@@ -602,8 +612,9 @@ A: tomorrow --\parencite{Hashimoto2023-qo}
 {Activity II: Asking a question of a PDF}
 {
 \begin{itemize}
-    \item In edge, make sure "page context" is on from the sidebar
-    \item Load ``Is Justified True Belief Knowledge?'' by Gettier as a PDF in Edge
+    \item In edge, make sure ``page context" is on from the sidebar
+    \item Load ``Navigating the Jagged Technological Frontier: Field Experimental Evidence of the Effects of AI on Knowledge 
+Worker Productivity and Quality''  as a PDF in Edge
     \item Prompt it. The essential part of the prompt is `Please load the page from the local context.'
     \item Make sure its response includes details from the PDF. Sometimes it goes off track.
 \end{itemize}
@@ -611,19 +622,20 @@ A: tomorrow --\parencite{Hashimoto2023-qo}
 Here are some example followups:
 
 \begin{itemize}
-    \item From this paper, what are those two examples? Do not search the web.
-    \item Could you explain Case I to me in more detail, please? What are some other examples?
+    \item Does this paper involve the use of chatbots or Github Copilot?
+    \item What's the jagged frontier?
 \end{itemize}
 }
-{\purplerect{Hi Bing. Today you are going to be acting as my postgraduate research assistant. We will be exploring a philosophy text. Please load the page from the local context. Do not search the web.}
+{\purplerect{Hi Bing. Today you are going to be acting as my research assistant. My job is to prepare a presentation based on this paper. To begin, please load the pdf from the local context and tell me its title.}
 \whiterect{
-Hello, this is Bing. I’m happy to help you with your research. I have loaded the page from the local context. It is a journal article titled “Is Justified True Belief Knowledge?” by Edmund L. Gettier, published in Analysis in 1963. The article challenges the traditional definition of knowledge as justified true belief and presents two counterexamples to show that it is not sufficient.
+Hello, this is Bing. I am happy to be your research assistant today. I have loaded the pdf from the local context. Its title is: \textbf{Navigating the Jagged Technological Frontier: Field Experimental Evidence of the Effects of AI on Knowledge Worker Productivity and Quality}
 }
-}{
-https://fitelson.org/proseminar/gettier.pdf
+}{https://dx.doi.org/10.2139/ssrn.4573321
 }
     
-
+% \begin{frame}{Bing Screenshot}
+% \includegraphics[width=\textwidth]{Figures/bing-chat-centaur.png}    
+% \end{frame}
 
 
 
@@ -700,16 +712,24 @@ My own experiments
 {\Large Depend only on what is within the local context. It's `OK'. Background pattern reliability varies by domain, detail, and topic.}
 		
 \end{frame}
-\begin{frame}{Activity III: Imagining theatre monologues}
+% BBS TODO
 
-\begin{itemize}
-    \item Creative writing from Ulrike
-    \item Editing as the creative act
-    \item We are wandering Borges' Library of Bable
-\end{itemize}
-    
-\end{frame}
-% \begin{frame}{Activity III: A basic demonstration of Github Copilot}
+\begin{frame}{Activity III: play with Bing Image creator/parser.}
+
+\begin{columns}
+    \begin{column}{.5\textwidth}
+        Take a photo of a thing, and then in the prompt say something like ``Today, you will be acting as a specialist in art history. Please make an impressionist painting of this photo. First, describe the object in the photo, then turn it into a description appropriate for an artistic work. Then make that image.'' 
+
+See if you can make an image appropriate for a blog header image by making a sketch and seeing what Bing can do with it, then email it to brian.ballsun-stanton@mq.edu.au and I'll show everyone.
+    \end{column}
+    \begin{column}{.25\textwidth}
+    \includegraphics[width=\textwidth]{Figures/blob.jpeg}
+    \end{column}
+    \begin{column}{.25\textwidth}
+    \includegraphics[width=\textwidth]{Figures/Screenshot_20230919-182257.png}
+    \end{column}
+\end{columns}
+
 
 % \begin{itemize}
 %     \item VS Code
@@ -717,7 +737,7 @@ My own experiments
 %     \item How to think about the copilot
 % \end{itemize}
     
-% \end{frame}
+\end{frame}
 
 \section{Dangers and confabulations}
 \sectiontemplate{Figures/stormy-ship.jpeg}{0}{Dangers and the need for a Hostile Reading}{\purplerect{Ok, the next section is on "Dangers and how to do a Hostile Reading" -- I talk about confabulation and owning the consequences. Perhaps an oil painting of a ship ruined on some rocks with a stormy red sky?
@@ -758,24 +778,6 @@ My own experiments
     
 \end{frame}
 
-\begin{frame}{Activity IV: Discussing the fake cases and replicating the worst ChatGPT bug}
-
-Let's replicate this bug.
-
-\begin{quote}    
-\textbf{The worst ChatGPT bug}
-
-``I apologize for the confusion earlier. Upon double-checking, I found that the case Varghese v. China Southern Airlines Co. Ltd., 925 F.3d 1339 (11th Cir. 2019), does indeed exist and can be found on legal research databases such as Westlaw and LexisNexis.'' ... 
-
-They can't do that. They are best thought of as role-playing conversation simulators—playing out the most statistically likely continuation of any sequence of text. ...
-
-What’s a common response to the question ``are you sure you are right?''—it's ``yes, I double-checked''. 
-
-\end{quote}    
-    
-\href{https://simonwillison.net/2023/May/27/lawyer-chatgpt/}{https://simonwillison.net/2023/May/27/lawyer-chatgpt/}              
-
-\end{frame}
 \section{Questions from the Audience}
 \begin{frame}{Question: ``How will they change my life?'' By: C.B.}
 \begin{itemize}
@@ -824,6 +826,77 @@ And since you can run them on your own instances, they remove all possible conce
 Don't say ``Please vary your sentences." to the prompt. That would be wrong. 
 \end{column}
 \end{columns}
+\end{frame}
+
+
+\begin{frame}{Activity IV: Playing with Code Interpreter}
+
+
+Resources: 
+\begin{itemize}
+    \item \textbf{https://tinyurl.com/khbv4nzp} (https://www.facs.nsw.gov.au/download?file=848716)
+    \item \textbf{https://tinyurl.com/mmy24ak6} (https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs-edition-3/jul2021-jun2026/access-and-downloads/digital-boundary-files)
+\end{itemize}
+
+Task: See what we can do to visualise the data.
+
+
+% Let's replicate this bug.
+
+% \begin{quote}    
+% \textbf{The worst ChatGPT bug}
+
+% ``I apologize for the confusion earlier. Upon double-checking, I found that the case Varghese v. China Southern Airlines Co. Ltd., 925 F.3d 1339 (11th Cir. 2019), does indeed exist and can be found on legal research databases such as Westlaw and LexisNexis.'' ... 
+
+% They can't do that. They are best thought of as role-playing conversation simulators—playing out the most statistically likely continuation of any sequence of text. ...
+
+% What’s a common response to the question ``are you sure you are right?''—it's ``yes, I double-checked''. 
+
+% \end{quote}    
+    
+% \href{https://simonwillison.net/2023/May/27/lawyer-chatgpt/}{https://simonwillison.net/2023/May/27/lawyer-chatgpt/}              
+
+\end{frame}
+
+\begin{frame}{Anon: FoA Needs a Policy}
+
+My proposed policy blurb.
+{\small
+\begin{quote}
+    We recognise that students may use 'Generative AI' assistance in composing, writing, and/or editing their work -- and that companies are rolling out new products all the time. The use of these tools cannot be forbidden (or required) as the software we use day to day changes to incorporate these tools and \textbf{we cannot prove their use or lack of use.}
+
+However, these tools are as dangerous as they are powerful.\textbf{ A student putting their name to a piece of work is responsible for all content and errors in that work -- and must be held to a much higher standard than previously.}
+
+Students who do not exercise oversight over mistakes, confabulations, and omissions from these tools should be penalised accordingly. Therefore, \textbf{mistakes that are characteristic of these tools} (making up citations, confabulating facts, or producing vague and unresponsive answers to specific questions) \textbf{will be penalised to a much higher degree than they were previously.} This is not a question of academic dishonesty -- merely something which will lead to a failing grade for the specific assessment where these errors occur.
+\end{quote}
+}
+\end{frame}
+
+\begin{frame}{J.J. Can they help me, in any reasonable way, to write my PhD thesis?}
+
+First, here is the relevant section from the draft university policy:
+
+\begin{quote}
+    Supervisors should have iterative exposure to their students’ work across their entire research degree and ensure their research progression (including critical judgement or originality) is observed and well-documented. Supervisors must closely monitor the use of Generative AI by their research students. Generative AI should not be used without supervisory approval, and where these tools are used in any capacity by research students or supervisors, they must be acknowledged (see section 3.1).  
+\end{quote}
+
+With that said, with care, they can be excellent tools:
+
+\begin{itemize}
+    \item https://chat.openai.com/share/1b055ec4-9ba3-49d0-ac4b-3710db02b8c1
+    \item Github copilot (https://docs.github.com/en/copilot/quickstart)
+    \item And Paper-QA and similiar langchain/embedding approaches have promise (https://github.com/whitead/paper-qa)
+\end{itemize}
+    
+\end{frame}
+
+\begin{frame}{T.S.: Discourage Use?}
+    \begin{quote}
+        As a teacher of tutorial classes at a university, many “take-home” assessment tasks have taken the form of problem sets or similar tasks with a “right or wrong” answer. How can I make adjustments to these assessments so that the same skills can be tested but students are discouraged from submitting answers generated by AI?
+    \end{quote}
+
+``Today, Cnut is remembered primarily for the fable about the king and the sea. This asserts that King Cnut sat on the seashore and tried to command the tide not to touch his feet, yet the sea ignored him.'' (\cite{British_Library_undated-kj})
+    
 \end{frame}
 
 \begin{frame}{Open Discussion and further Demos}
